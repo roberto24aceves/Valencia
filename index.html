@@ -17,14 +17,24 @@
 				height: 450px;
 			}
 			.preview{
+				width: 100%;
 				display: block;
 				margin-right: auto;
 				margin-left: auto;
+				box-sizing:border-box;
+				float:left;
+			}
+			.canvas{
+				width: 100%;
+				height: auto;
 			}
 			.colors{
 				display: block;
-				margin: 1.25rem 0 0 1.25rem;
+				margin-top: 1rem;
+				margin-right: auto;
+				margin-left: auto;
 			}
+			
 		</style>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -101,7 +111,7 @@
 					</header>
 					<div class="content">
 						<div class="preview">
-							<canvas class="preview" width="560px" height="450px" id="canvas"></canvas>
+							<canvas class="canvas" width="600px" height="450px" id="canvas"></canvas>
 							<div id="avatar" class="colors">
 
 								<div id="fondo" >
