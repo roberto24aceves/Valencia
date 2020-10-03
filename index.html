@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Valencia</title>
@@ -24,17 +19,34 @@
 				box-sizing:border-box;
 				float:left;
 			}
-			.canvas{
-				width: 100%;
-				height: auto;
+			.simg{
+    			border: 2px solid rgba(0, 0, 0, 0);
+    			width: 9%;
 			}
-			.colors{
-				display: block;
-				margin-top: 1rem;
-				margin-right: auto;
-				margin-left: auto;
+			.simg:hover{
+			    border: 2px solid rgba(0, 0, 0, 1);;
 			}
+			#image-f{
+    			display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+			}
+
+			@media (max-width: 700px){
+			    .simg{
+			        width: 23%;
+			    }
+			    .simg:hover{
+			        border: 2px solid rgba(0, 0, 0, 1);
+			    }
 			
+			    #image{
+			        display: block;
+			        padding: 30% 0 0 0;
+			        margin-left: auto;
+			        margin-right: auto;
+			    }
+			}
 		</style>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -69,7 +81,7 @@
 								con creatividad y pasion, Siempre se nos ha caracterizado por el gran trato 
 								al cliente y por la personalizacion de los diseños y la creatividad al desarrollar cada proyecto.
 							</p>
-							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+							<span class="image main"><img src="images/img-a.jpg" alt="" /></span>
 						</div>
 					</section>
 
@@ -96,10 +108,10 @@
 									</header>
 									<div class="content">
 										<div class="gallery">
-											<a href="images/gallery/fulls/01.jpg" class="landscape"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
-											<a href="images/gallery/fulls/02.jpg"><img src="images/gallery/thumbs/02.jpg" alt="" /></a>
-											<a href="images/gallery/fulls/03.jpg"><img src="images/gallery/thumbs/03.jpg" alt="" /></a>
-											<a href="images/gallery/fulls/04.jpg" class="landscape"><img src="images/gallery/thumbs/04.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/img (1).jpg" class="landscape"><img src="images/gallery/thumbs/img (1).jpg" alt="" /></a>
+											<a href="images/gallery/fulls/img (2).jpg"><img src="images/gallery/thumbs/img (2).jpg" alt="" /></a>
+											<a href="images/gallery/fulls/img (3).jpg"><img src="images/gallery/thumbs/img (3).jpg" alt="" /></a>
+											<a href="images/gallery/fulls/img (4).jpg" class="landscape"><img src="images/gallery/thumbs/img (4).jpg" alt="" /></a>
 										</div>
 									</div>
 								</section>
@@ -110,42 +122,43 @@
 					<header>
 						<h2>Preview</h2>
 					</header>
+					
 					<div class="content">
+						<p>
+							Selecciona un <strong>mueble</strong> y juega con los colores moviendo la barra o con los colores
+							del fondo con el boton. 
+						</p>
 						<div class="preview">
-							<p>
-								<strong>Personalizar</strong> tu espacio es parte de nuestro trabajo, aqui podras encontrar una preview de 
-								los diferentes muebles y estilos. 
-							</p>
-							<canvas class="canvas" width="600px" height="450px" id="canvas"></canvas>
-							<div id="avatar" class="colors">
-
-								<div id="fondo" >
-									<img src="preview/F_1.png" width="45px" height="auto" />
-									<img src="preview/F_2.png" width="45px" height="auto" />
-									<img src="preview/F_3.png" width="45px" height="auto" />
-									<img src="preview/F_4.png" width="45px" height="auto" />
-									<img src="preview/F_5.png" width="45px" height="auto" />
-									<img src="preview/F_6.png" width="45px" height="auto" />
-									<img src="preview/F_7.png" width="45px" height="auto" />
-									<img src="preview/F_8.png" width="45px" height="auto" />
-									<img src="preview/F_9.png" width="45px" height="auto" />
-									<img src="preview/F_10.png" width="45px" height="auto" />
+							<div class="container">
+								<div id="background-f" class="preview_f">
+									<img src="" alt="" id="image-f">
 								</div>
-								<div id="muebles">
-									<img src="preview/muebles/1.png" width="45px" height="auto" >
-									<img src="preview/muebles/2.png" width="45px" height="auto" >
-									<img src="preview/muebles/3.png" width="45px" height="auto" >
-									<img src="preview/muebles/4.png" width="45px" height="auto" >
-									<img src="preview/muebles/5.png" width="45px" height="auto" >
+								<div class="selector">
+									<img class="simg" onclick="pintar('simg-1')" src="images/01.png" alt="" id="simg-1">
+									<img class="simg" onclick="pintar('simg-2')" src="images/02.png" alt="" id="simg-2">
+									<img class="simg" onclick="pintar('simg-3')" src="images/03.png" alt="" id="simg-3">
+									<img class="simg" onclick="pintar('simg-4')" src="images/04.png" alt="" id="simg-4">
+									<img class="simg" onclick="pintar('simg-5')" src="images/05.png" alt="" id="simg-5">
+									<img class="simg" onclick="pintar('simg-6')" src="images/06.png" alt="" id="simg-6">
+									<img class="simg" onclick="pintar('simg-7')" src="images/07.png" alt="" id="simg-7">
+									<img class="simg" onclick="pintar('simg-8')" src="images/08.png" alt="" id="simg-8">
+									<img class="simg" onclick="pintar('simg-9')" src="images/09.png" alt="" id="simg-9">
+									<img class="simg" onclick="pintar('simg-10')" src="images/10.png" alt="" id="simg-10">
 								</div>
-								<script>
-									$('#avatar').Cubexy();
-								</script>
-								
+								<div id="change-f" class="buttons_a">
+									<button class="btn" onclick="background_change(1)" >Fondo</button>
+									<!--
+										<input class="btn" type="button" value="Inicio" onclick="location.reload()"/>
+									-->
+									<!--
+										
+										
+										<button id="b_download" class="btn" onclick="download_img()" >Download</button>
+									-->
+									<input class="btn-r" type="range" id="color-f" min="1" max="360" step="10" value="1">
+								</div>
 							</div>
-							<script>
-								$('#avatar').Cubexy();
-							</script>
+
 						</div>
 					</div>
 				</section>
@@ -163,23 +176,23 @@
 							<p style="margin-top: 1rem;">Puedes encontrarnos en la <strong>ciudad de Mérida,</strong> o de igual manera puedes 
 								marcar a los numeros siguientes o dandole <strong>click</strong> al siguiente boton.</p>
 							<ul class="actions">
-								<li><a href="#" class="button primary large">Llamar</a></li>
-								<li><a href="#" class="button large">Correo</a></li>
+								<li><a href="tel:+52999199-9902" class="button primary large">Llamar</a></li>
+								<li><a href="mailto:Herbert_val.mar@hotmail.com" class="button large">Correo</a></li>
 							</ul>
 						</div>
 						<footer>
 							<ul class="items">
 								<li>
 									<h3>Email</h3>
-									<a href="#">information@untitled.ext</a>
+									<a href="mailto:Herbert_val.mar@hotmail.com">Herbert_val.mar@hotmail.com</a>
 								</li>
 								<li>
 									<h3>Telefono</h3>
-									<a href="#">(000) 000-0000</a>
+									<a href="tel:+52999199-9902">+52 (999) 199-9902</a>
 								</li>
 								<li>
 									<h3>Direccion</h3>
-									<span>1234 Somewhere Road, Nashville, TN 00000</span>
+									<span>C.172 entre 14 y 16 Col.Francisco I.Madero (C.P.97240)</span>
 								</li>
 								<li>
 									<h3>Siguenos</h3>
@@ -199,15 +212,21 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+			<script src="assets/js/Furniture_Colors.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<!-- Cubexy-->
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="assets/js/Cubexy.js"></script>
 	</body>
 </html>
+
+<!--
+	Pagina desarrollada por https://html5up.net/ @ajlkn
+	Licencia gratuita "Creative Commons"
+
+	Furniture Colors - Desarrollado  por Roberto Aceves.
+	@roberto24aceves
+	@ParallaxOficial 
+-->
